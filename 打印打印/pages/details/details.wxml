@@ -1,0 +1,63 @@
+<!--pages/detail/detail.wxml-->
+<view class='details'>
+<image src='/static/img/loading.svg' class='loading' wx:if="{{isLoading}}"></image>
+
+  <view wx:else> 
+  <view class='book-details'>
+    <view class='book-t'>
+      <image src='{{bookData.data.img}}' class='img'></image>
+      <view class='main-msg'>
+        <view class='title'>
+        {{bookData.data.title}}
+        </view>
+        <view class='author-name'>
+         作者：{{bookData.data.author}}
+        </view>
+        <view class='looknumbers'>
+          {{bookData.data.looknums}}人再看
+        </view>
+        <view class='likenumbers'>
+          {{bookData.data.startsnums}}人喜欢
+        </view>
+      </view>
+    </view>
+    <view class='book-b'>
+    <!-- disabled='{{bookData.isCollect ==0?false:true}}' -->
+      <button class='btn' bindtap="handleCollect" >
+      {{bookData.isCollect==0?'收藏':'已收藏'}}
+      </button>
+      
+      <button class='btn' open-type="share">
+      分享好友
+      </button>
+    </view>
+  </view>
+  <view class='book-desc'>
+    <view class='title'>
+    简介
+    </view>
+    <view class='desc-main'>
+      {{bookData.data.desc}}
+    </view>
+  </view>
+  <view class='book-catalog'>
+    <view class='catalog-l'> 
+      <view class='show-catalog'>
+      查看目录
+      </view>
+      <view class='catalogs'>
+      共{{bookData.length}}章
+      </view>
+    </view>
+   
+   <view class='catalog-r updata-time'>
+   更新与两天前>
+   </view>
+  </view>
+  <view class='read-btn-wrap'>
+    <button class='b-btn' bindtap='jumpCatalog'>阅读该书籍</button>
+  </view>
+  
+  </view>
+  
+</view>

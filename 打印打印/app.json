@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/details/details",
+    "pages/catelog/catelog",
+    "pages/book/book"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "云书",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"首页",
+      "iconPath":"static/img/home-page.svg"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "书籍",
+      "iconPath": "static/img/book.svg"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "个人中心",
+      "iconPath": "static/img/persom-center.svg"
+    }
+    ]
+  }
+}
